@@ -10,7 +10,7 @@
     <h1>Lista de Produtos</h1>
     <?php
 include ('conecta.php');
-$sql="SELECT * FROM tb_produto";
+$sql="SELECT * FROM PRODUTO";
 $sql=$conn->prepare($sql);
 $sql->execute();
 $result=$sql -> fetchALL();
@@ -22,21 +22,26 @@ $result=$sql -> fetchALL();
     <tr>
        <th>ID</th>
               <th>Nome do produto</th>
-               <th>categoria</th>
-                <th>quantidade</th>
-                 <th>preço do produto</th>
-                  <th>descrição</th>
+               <th>Categoria</th>
+                <th>Quantidade</th>
+                 <th>Preço do produto</th>
+                  <th>Descrição</th>
+                  <th>Editar produto</th>
+                  <th>Deletar produto</th>
 
     </tr>
   <?php
-  foreach ($result as $linhas) {
+  foreach ($result as $linha) {
  echo "<tr>";
-echo "<td>". $linha['id']."</td>";
+echo "<td>". $linha['ID_PROD']."</td>";
 echo "<td>". $linha['NM_PROD']."</td>";
 echo "<td>". $linha['CATEGORIA']."</td>";
 echo "<td>". $linha['QTD_PROD']."</td>";
 echo "<td>". $linha['PRECO']."</td>";
-echo "<td>". $linha['DESRICAO']."</td>";
+echo "<td>". $linha['DESCRICAO']."</td>";
+echo "<td> <form action=''><button value='".$linha['ID_PROD']."'>Editar</button></form></td>";
+echo "<td> <form action=''><button value='".$linha['ID_PROD']."'>Deletar</button></form></td>";
+ echo "</tr>";
   }
 ?>
 

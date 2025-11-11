@@ -18,13 +18,13 @@
     $preco = $_POST['preco'];
     $desricao = $_POST['desricao'];
     
-$sql="INSERT INTO tb_produto (NM_PROD, CATEGORIA, QTD_PROD, PRECO, DESRICAO) VALUES (:NM_PROD, :CATEGORIA, :QTD_PROD, :PRECO, :DESRICAO)";
+$sql="INSERT INTO PRODUTO (NM_PROD, CATEGORIA, QTD_PROD, PRECO, DESCRICAO) VALUES (:NM_PROD, :CATEGORIA, :QTD_PROD, :PRECO, :DESCRICAO)";
 $stmt=$conn->prepare($sql);
 $stmt->bindParam(":NM_PROD", $nome);
 $stmt->bindParam(":CATEGORIA", $categoria);
 $stmt->bindParam(":QTD_PROD", $quantidade);
-$stmt->bindParam("PRECO", $preco);
-$stmt->bindParam("DESRICAO", $desricao);
+$stmt->bindParam(":PRECO", $preco);
+$stmt->bindParam(":DESCRICAO", $desricao);
 $stmt->execute();
 echo "<br><a href='index.html'>⬅ Voltar ao início</a>";
     ?>

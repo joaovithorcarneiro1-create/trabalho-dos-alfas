@@ -1,3 +1,4 @@
 <?php
-$conn = new PDO("mysql:host=localhost;dbname=dbvendas202",
+$conn = new PDO("mysql:host=localhost;dbname=mogger",
 "root", "");
+?>
