@@ -39,8 +39,8 @@ echo "<td>". $linha['CATEGORIA']."</td>";
 echo "<td>". $linha['QTD_PROD']."</td>";
 echo "<td>". $linha['PRECO']."</td>";
 echo "<td>". $linha['DESCRICAO']."</td>";
-echo "<td> <form action=''><button value='".$linha['ID_PROD']."'>Editar</button></form></td>";
-echo "<td> <form action=''><button value='".$linha['ID_PROD']."'>Deletar</button></form></td>";
+echo "<td> <form action=''><button type='submit' value='".$linha['ID_PROD']."' name='id'>Editar</button></form></td>";
+echo "<td> <form action='deletar_produto.php'><button type='submit' value='".$linha['ID_PROD']."' name='id'>Deletar</button></form></td>";
  echo "</tr>";
   }
 ?>
