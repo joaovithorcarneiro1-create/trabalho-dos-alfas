@@ -56,3 +56,95 @@ input[type="submit"], input[type="reset"] {
 input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #003399;
 }
+/* ======= ESTILO GERAL ======= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======= TÍTULO ======= */
+h1 {
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+    margin: 0 0 30px 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* ======= TABELA ======= */
+table {
+    width: 90%;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+table th {
+    background-color: #0044cc;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f6ff;
+}
+
+table tr:hover {
+    background-color: #dce7ff;
+}
+
+/* ======= BOTÕES DENTRO DA TABELA ======= */
+
+button {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #003399;
+}
+
+/* Botão deletar em vermelho */
+td form button[name="id"][value] {
+    margin: 0;
+}
+
+td form[action="deletar_produto.php"] button {
+    background-color: #cc0000;
+}
+
+td form[action="deletar_produto.php"] button:hover {
+    background-color: #990000;
+}
+
+/* ======= LINK VOLTAR ======= */
+a {
+    display: inline-block;
+    margin: 20px;
+    color: #0044cc;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -17,6 +17,7 @@
     $sql->bindParam(":cat", $_REQUEST["categoria"]);
     $sql->bindParam(":quanti", $_REQUEST["quantidade"]);
     $sql->bindParam(":preco", $_REQUEST["preco"]);
+    $sql->bindParam(":descricao", $_REQUEST["desricao"]);
     //
     //
     $sql->bindParam(":id", $id);
